@@ -18,7 +18,7 @@
     <div id="PaintWebTarget"></div>
 
 <script type="text/javascript">
-var srcImg = null, img1 =null, filename=null;
+var srcImg = null, img1 =null;
 
 (function () {
 	srcImg = window.opener.document.getElementById("uploadImage");
@@ -31,10 +31,6 @@ var srcImg = null, img1 =null, filename=null;
 })();
 
 function initEditor() {
-	var ex = /\?filename=([a-z0-9\-]+)\&?/i;
-	var url = srcImg.src;
-	filename = url.match(ex)[1]; 
-
 	var target = document.getElementById('PaintWebTarget'),
 	pw = new PaintWeb();
 	pw.config.guiPlaceholder = target;
@@ -63,6 +59,11 @@ function initEditor() {
 	};
 }
 
+var ex = /\?filename=([a-z0-9\-]+)\&?/i;
+var dashdash = '--';
+var crlf     = '\r\n';
+var type1	 = 'png';
+
 function imageSaveTo(idata, width, height){
 	var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     var progressBar = document.getElementById("progressBar");
@@ -70,18 +71,16 @@ function imageSaveTo(idata, width, height){
     progressBar.style.display = "";
     var progressRate = document.getElementById("progressRate");
 	
-	var xhr = new XMLHttpRequest(),
-	boundary = 'multipartformboundary' + (new Date).getTime();
-
+	var url = srcImg.src;
+	var filename = url.match(ex)[1]; 
+	
+	var boundary = 'multipartformboundary' + (new Date).getTime();
+	var xhr = new XMLHttpRequest();
 	xhr.open("POST", "saveImage");
 	xhr.setRequestHeader('content-type', 'multipart/form-data; boundary='+ boundary);
-	
-	var dashdash = '--';
-	var crlf     = '\r\n';
-	var type1	 = 'png';
-	
+
 	var builder = dashdash + boundary + crlf + 'Content-Disposition: form-data; name="imageFile"' + 
-		'; filename="' + filename + '";' + crlf + ' Content-Type: application/octet-stream' + crlf + crlf; 
+					'; filename="' + filename + '";' + crlf + ' Content-Type: application/octet-stream' + crlf + crlf; 
 	builder += idata;
 	builder += crlf + dashdash + boundary + crlf + 'Content-Disposition: form-data; name="fileori"' + crlf + crlf + filename;
 	builder += crlf + dashdash + boundary + dashdash + crlf;
