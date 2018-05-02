@@ -23,7 +23,7 @@ And Several features have been added to the basic functionality of PaintWeb.
     Framework - Spring 4
     Build Tool - Maven
      
-Modified PaintWeb Demo: [https://github.com/gujc71/imageEditor/imageEditor4Demo.html](https://github.com/gujc71/imageEditor/imageEditor4Demo.html)
+Modified PaintWeb Demo: [https://gujc71.github.io/imageEditor/src/main/webapp/imageEditor4Demo.html](https://gujc71.github.io/imageEditor/src/main/webapp/imageEditor4Demo.html)
 
      
 License: MIT
