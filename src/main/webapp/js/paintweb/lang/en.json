@@ -40,7 +40,7 @@
 
   "guiCanvasResizer": "Resize the image canvas.",
   "guiViewportResizer": "Resize the image viewport.",
-  "imageZoomTitle": "Zoom image",
+  "imageZoomTitle": "Zoom image (Use Up/Down Arrow key)",
   "imageZoomLabel": "Zoom:",
 
   "tabs": {
@@ -150,9 +150,9 @@
       "fontFamily_add": "Another font...",
       "fontSize": "Font size:",
       "textAlign": "Text alignment",
-      "textAlign_left": "Left",
-      "textAlign_center": "Center",
-      "textAlign_right": "Right",
+      "left": "Left",
+      "center": "Center",
+      "right": "Right",
       "textString_value": "Hello world!"
     },
     "shapeType": "Shape type",

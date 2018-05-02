@@ -29,7 +29,9 @@ function uploadImageFileChange() {
 function fn_modifyImage() {
 	var w = window.open("imageEditor", "", "width=800,height=650,top=0px,left=200px,status=,resizable=false,scrollbars=no");
 }
-
+function fn_modifyImage2() {
+	var w = window.open("imageEditor2", "", "width=800,height=650,top=0px,left=200px,status=,resizable=false,scrollbars=no");
+}
 function fn_removeImage() {
 	$('#uploadImage').removeAttr("src");
 	$('#imageEditor').css('display', 'none');
@@ -39,16 +41,17 @@ function fn_removeImage() {
 <body>
 	<h2>Image Editor Sample for Java</h2>
 	
-	<div style="width:500px; min-height: 260px">
-		<img id="uploadImage" style="width:99%;" />
-	</div>
 	<div style="text-align:center; margin-top: 5px;">
 		<a href="javascript:fn_uploadImage('')" class="btn sty13">Load Image</a>
 		<div id="imageEditor" style="display:none;">
-			<a href="javascript:fn_modifyImage('');" class="btn sty13">Modify</a>
+			<a href="javascript:fn_modifyImage('');" class="btn sty13">Image Editor</a>
 			<a href="javascript:fn_removeImage('');" class="btn sty13">Delete</a>
 		</div>	
 		<input type="file" id="uploadImageFile" onchange="uploadImageFileChange()" style="display:none"/>
+	</div>
+
+	<div style="min-height: 260px">
+		<img id="uploadImage"/>
 	</div>
 </body>
 </html>

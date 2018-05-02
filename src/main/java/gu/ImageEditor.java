@@ -24,7 +24,7 @@ public class ImageEditor{
 		
 		return "imageEditor"; 
 	}	
-	
+
 	@RequestMapping(value = "fileUpload")
 	public void fileUpload(HttpServletResponse response, MultipartFile upfile) {
         if(upfile==null) return;

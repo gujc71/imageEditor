@@ -40,7 +40,7 @@
 
   "guiCanvasResizer": "Resize the image canvas.",
   "guiViewportResizer": "Resize the image viewport.",
-  "imageZoomTitle": "Zoom image",
+  "imageZoomTitle": "이미지 확대/축소(화살표키를 이용하세요)",
   "imageZoomLabel": "Zoom:",
 
   "tabs": {
@@ -150,9 +150,9 @@
       "fontFamily_add": "Another font...",
       "fontSize": "Font size:",
       "textAlign": "Text alignment",
-      "textAlign_left": "Left",
-      "textAlign_center": "Center",
-      "textAlign_right": "Right",
+      "left": "Left",
+      "center": "Center",
+      "right": "Right",
       "textString_value": "문자를 입력하세요"
     },
     "shapeType": "도형종류",

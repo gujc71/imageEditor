@@ -141,7 +141,7 @@
    * @type CSS3Color-rgba functional notation
    * @default "rgba(0,0,0,1)"
    */
-  "fillStyle": "rgba(0,0,0,1)",
+  "fillStyle": "rgba(0,0,255,1)",
 
   /**
    * Default stroke style.
@@ -149,7 +149,7 @@
    * @type CSS3Color-rgba functional notation
    * @default "rgba(0,0,255,1)"
    */
-  "strokeStyle": "rgba(0,0,255,1)",
+  "strokeStyle": "rgba(0,0,0,1)",
 
   /**
    * Enable checkers background. This tells the user interface to render 
@@ -199,8 +199,8 @@
    * @type Number
    * @default 0.05
    */
-  // 0.05 means 5% zoom.
-  "imageZoomStep": 0.05,
+  // 0.1 means 10% zoom. it's modified with zoom step in layout.xhtml.
+  "imageZoomStep": 0.1,
 
   /**
    * The maximum allowed image zoom level.
