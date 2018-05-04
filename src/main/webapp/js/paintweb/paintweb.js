@@ -2677,7 +2677,7 @@ function PaintWeb (win, doc) {
 		var builder = dashdash + boundary + crlf + 'Content-Disposition: form-data; name="imageFile"' + 
 						'; filename="' + filename + '";' + crlf + ' Content-Type: application/octet-stream' + crlf + crlf; 
 		builder += idata;
-		builder += crlf + dashdash + boundary + crlf + 'Content-Disposition: form-data; name="fileori"' + crlf + crlf + filename;
+		builder += crlf + dashdash + boundary + crlf + 'Content-Disposition: form-data; name="filename"' + crlf + crlf + filename;
 		builder += crlf + dashdash + boundary + dashdash + crlf;
 		
 		xhr.onload = function () {

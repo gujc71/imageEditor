@@ -47,7 +47,7 @@ public class ImageEditor{
     
 	@RequestMapping(value = "saveImage", method = RequestMethod.POST)
 	public void saveImage(HttpServletRequest request, MultipartFile imageFile) {
-		String filename = filePath +"/"+ request.getParameter("fileori");
+		String filename = filePath +"/"+ request.getParameter("filename");
 		
 		try {
 			byte[] Filebyte = imageFile.getBytes();
