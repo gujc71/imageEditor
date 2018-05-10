@@ -9,6 +9,8 @@
     <title>PaintWeb</title>
     <script type="text/javascript" src="js/paintweb/paintweb.js"></script>
     <script type="text/javascript" src="js/paintweb/html2canvas.min.js"></script>
+    <script type="text/javascript" src="js/paintweb/es6-promise.min.js"></script>
+    <script type="text/javascript" src="js/paintweb/es6-promise.auto.min.js"></script>
 </head>
 <body>
     <img id="editableImage"/>
