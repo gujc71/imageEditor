@@ -109,8 +109,9 @@ pwlib.tools.text = function (app) {
     if (!inputText) {
 		inputText = doc.createElement('div');
 		inputText.className = 'inputText';
-		inputText.contentEditable = true; 
-		gui.elems.canvasContainer.appendChild(inputText);
+		inputText.contentEditable = true;    
+		inputText.addEventListener('keydown',  this.keydown,  false);
+		gui.elems.canvasContainer.appendChild(inputText);  
     }
     
     ev_configChangeId = app.events.add('configChange', ev_configChange);
@@ -317,10 +318,13 @@ pwlib.tools.text = function (app) {
    * @returns {Boolean} True if the key was recognized, or false if not.
    */
   this.keydown = function (ev) {
-    if (!prevTool || ev.kid_ != 'Escape') {
+    //if (!prevTool || ev.kid_ != 'Escape') {
+    if (!prevTool || ev.keyCode != 27) { // esc    	 
       return false;
-    }
+    } 
 
+    inputText.innerText = "";
+    	
     mouse.buttonDown = false;
     app.toolActivate(prevTool, ev);
 
